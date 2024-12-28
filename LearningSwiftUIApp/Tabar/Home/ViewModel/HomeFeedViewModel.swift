@@ -11,7 +11,7 @@ class HomeFeedViewModel: ObservableObject {
     @Published var arrFeeds: [Feeds]?
     
     func fetchData() {
-        arrFeeds = [Feeds(userImage: "icon.home.user", userName: "Shubham Gupta", userDesignation: "Sr. iOS Developer", feedImage: "icon.home.feed"), Feeds(userImage: "icon.home.user", userName: "Shubham Gupta", userDesignation: "Sr. iOS Developer", feedImage: "icon.home.feed"), Feeds(userImage: "icon.home.user", userName: "Shubham Gupta", userDesignation: "Sr. iOS Developer", feedImage: "icon.home.feed"), Feeds(userImage: "icon.home.user", userName: "Shubham Gupta", userDesignation: "Sr. iOS Developer", feedImage: "icon.home.feed"),Feeds(userImage: "icon.home.user", userName: "Shubham Gupta", userDesignation: "Sr. iOS Developer", feedImage: "icon.home.feed")]
+        arrFeeds = [Feeds(userImage: "icon.home.user", userName: "Shubham Gupta", userDesignation: "Sr. iOS Developer", feedImage: "icon.home.feed"), Feeds(userImage: "icon.home.user", userName: "Shubham Gupta", userDesignation: "Sr. iOS Developer", feedImage: "icon.home.feed"), Feeds(userImage: "icon.home.user", userName: "Shubham Gupta", userDesignation: "Sr. iOS Developer", feedImage: "icon.home.feed"), Feeds(userImage: "icon.home.user", userName: "Shubham Gupta", userDesignation: "Sr. iOS Developer", feedImage: "icon.home.feed"),
+            Feeds(userImage: "icon.home.user", userName: "Shubham Gupta", userDesignation: "Sr. iOS Developer", feedImage: "icon.home.feed")]
     }
-    
 }

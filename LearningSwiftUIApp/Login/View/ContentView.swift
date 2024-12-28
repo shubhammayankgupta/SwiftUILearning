@@ -11,14 +11,15 @@ struct ContentView: View {
     @State private var email: String = ""
     @State private var password: String = ""
     @State private var isValidate: Bool = false
+    
     var body: some View {
-        NavigationView {
+        NavigationStack {
             VStack {
                 Text("Login")
                     .font(.largeTitle).padding()
                 Text("Please provide login Details").padding()
                     .font(.subheadline)
-                
+
                 TextField("Email Address", text: $email).padding()
                     .cornerRadius(4.0)
                     .background(Color.gray)
@@ -45,6 +46,8 @@ struct ContentView: View {
                 NavigationLink(destination: TabbarView()) {
                     Text("Login")
                 }
+                
+                
                 
                 
 //                Button("Login") {
