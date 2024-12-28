@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7601AA862D20352100E69460 /* LoginResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7601AA852D20352100E69460 /* LoginResponse.swift */; };
 		76360DAB2D1E92DB00C17CAF /* VideoData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76360DAA2D1E92DB00C17CAF /* VideoData.swift */; };
 		76360DB62D1E94D200C17CAF /* Feed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76360DB52D1E94D200C17CAF /* Feed.swift */; };
 		76360DB92D1E959900C17CAF /* HomeFeedViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76360DB82D1E959900C17CAF /* HomeFeedViewModel.swift */; };
@@ -27,6 +28,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7601AA852D20352100E69460 /* LoginResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginResponse.swift; sourceTree = "<group>"; };
 		76360DAA2D1E92DB00C17CAF /* VideoData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoData.swift; sourceTree = "<group>"; };
 		76360DB52D1E94D200C17CAF /* Feed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Feed.swift; sourceTree = "<group>"; };
 		76360DB82D1E959900C17CAF /* HomeFeedViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeFeedViewModel.swift; sourceTree = "<group>"; };
@@ -58,6 +60,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7601AA832D20350300E69460 /* Request */ = {
+			isa = PBXGroup;
+			children = (
+				76871EFF2D202D8A00E838BB /* LoginRequest.swift */,
+			);
+			path = Request;
+			sourceTree = "<group>";
+		};
+		7601AA842D20351000E69460 /* Response */ = {
+			isa = PBXGroup;
+			children = (
+				7601AA852D20352100E69460 /* LoginResponse.swift */,
+			);
+			path = Response;
+			sourceTree = "<group>";
+		};
 		76360DA82D1E92AC00C17CAF /* Video */ = {
 			isa = PBXGroup;
 			children = (
@@ -168,7 +186,8 @@
 		76871EFE2D202D7800E838BB /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				76871EFF2D202D8A00E838BB /* LoginRequest.swift */,
+				7601AA842D20351000E69460 /* Response */,
+				7601AA832D20350300E69460 /* Request */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -318,6 +337,7 @@
 				765999402D0EC60100A158DC /* VideoCellView.swift in Sources */,
 				765999422D0EC7DF00A158DC /* VideoViewModel.swift in Sources */,
 				76871F002D202D8A00E838BB /* LoginRequest.swift in Sources */,
+				7601AA862D20352100E69460 /* LoginResponse.swift in Sources */,
 				764E88652D0AEA2300A63930 /* HomeView.swift in Sources */,
 				76360DB92D1E959900C17CAF /* HomeFeedViewModel.swift in Sources */,
 				76871F042D202E7A00E838BB /* LoginViewModel.swift in Sources */,

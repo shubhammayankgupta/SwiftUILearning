@@ -8,10 +8,8 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State private var email: String = ""
-    @State private var password: String = ""
     @State private var isValidate: Bool = false
-    
+    @ObservedObject var loginViewModel = LoginViewModel()
     var body: some View {
         NavigationStack {
             VStack {
@@ -20,7 +18,7 @@ struct ContentView: View {
                 Text("Please provide login Details").padding()
                     .font(.subheadline)
 
-                TextField("Email Address", text: $email).padding()
+                TextField("Email Address", text: $loginViewModel.loginData.email).padding()
                     .cornerRadius(4.0)
                     .background(Color.gray)
                     .foregroundColor(Color.red)
@@ -32,7 +30,7 @@ struct ContentView: View {
                     }
                 }
                 
-                SecureField("Password", text: $password).padding()
+                SecureField("Password", text: $loginViewModel.loginData.password).padding()
                     .cornerRadius(4.0)
                     .background(Color.gray)
                     .foregroundColor(Color.red)
@@ -43,9 +41,25 @@ struct ContentView: View {
                     }
                 }.padding()
 
-                NavigationLink(destination: TabbarView()) {
-                    Text("Login")
-                }
+                
+                NavigationLink(
+                    destination: TabbarView(),
+                    isActive: $isValidate,
+                    label: {
+                        Button(action: {
+                            self.isValidate = !(loginViewModel.loginData.email.isEmpty) && !(loginViewModel.loginData.password.isEmpty)
+                            if self.isValidate {
+                                loginViewModel.login()
+                            }
+                            
+                        }, label: {
+                            Text("Login")
+                        })
+                    })
+                
+//                NavigationLink(destination: TabbarView()) {
+//                    Text("Login")
+//                }
                 
                 
                 
@@ -60,6 +74,7 @@ struct ContentView: View {
 //                .foregroundColor(Color.white)
 //                .padding()
             }.padding()
+            
         }
         
     }

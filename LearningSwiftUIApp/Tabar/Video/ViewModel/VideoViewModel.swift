@@ -18,8 +18,15 @@ class VideoViewModel: ObservableObject {
         urlRequest.addValue("application/json", forHTTPHeaderField: "content-type")
         HttpUtility.shared.getData(request: urlRequest, resultType: [VideoData].self) { reuslt in
             DispatchQueue.main.async {
-                self.videoData = reuslt
-                self.isLoading = false
+                switch reuslt {
+                case .success(let videoData):
+                    self.videoData = videoData
+                    self.isLoading = false
+                case .failure(let error):
+                    print(error.localizedDescription)
+                    self.isLoading = false
+                default: break
+                }
             }
         }
     }
