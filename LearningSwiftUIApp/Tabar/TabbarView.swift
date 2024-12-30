@@ -30,9 +30,9 @@ struct TabbarView: View {
                     Text("Notification")
                     Image(systemName: "bell.fill")
                 }
-            HomeView()
+            TaskView()
                 .tabItem {
-                    Text("Job")
+                    Text("Task")
                     Image(systemName: "tray.2.fill")
                 }
         }.navigationTitle("Feeds")

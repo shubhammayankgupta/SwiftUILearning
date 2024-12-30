@@ -9,6 +9,7 @@ import SwiftUI
 struct HomeView: View {
     @ObservedObject var viewModel = HomeFeedViewModel()
     var body: some View {
+        NavigationStack {
             List {
                 ForEach(viewModel.arrFeeds ?? [], id: \.userName) { feed in
                     NavigationLink(destination: FeedDetailView(feed: feed)) {
@@ -16,12 +17,13 @@ struct HomeView: View {
                     }
                     
                 }
-            }.listRowSeparator(Visibility.visible)
-            .navigationTitle("Feeds")
+            }.navigationTitle("Feeds")
+            .listRowSeparator(Visibility.visible)
             .listStyle(.plain)
             .onAppear {
                 viewModel.fetchData()
             }
+        }
     }
 }
 
