@@ -11,6 +11,7 @@ import SwiftUI
 struct LearningSwiftUIAppApp: App {
     var body: some Scene {
         WindowGroup {
+            //Mail COntentView
             ContentView()
         }
     }
