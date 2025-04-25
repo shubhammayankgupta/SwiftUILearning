@@ -21,7 +21,6 @@ struct NavigationBarView: View {
                     Image("icon.home.user")
                         .resizable()
                         .frame(width: 50, height: 50)
-                    
                 })
             }
         }
